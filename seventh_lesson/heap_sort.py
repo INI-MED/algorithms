@@ -32,10 +32,10 @@ def heap_sort(test_list: list) -> list:
 
 def result(n: int) -> list:
     data = [random.randint(0, 100) for _ in range(n)]
-    print(f"unsorted list: {data}")
+    # print(f"unsorted list: {data}")
     return heap_sort(data)
 
 
 timer = time.time()
-print(result(10000), "\n")
+print(result(1000000), "\n")
 print(time.time() - timer)

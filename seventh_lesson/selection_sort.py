@@ -15,10 +15,10 @@ def selection_sort(test_list: list) -> list:
 
 def result(n: int) -> list:
     data = [random.randint(0, 100) for _ in range(n)]
-    print(f"unsorted list: {data}")
+    # print(f"unsorted list: {data}")
     return selection_sort(data)
 
 
 timer = time.time()
-print(result(1000), "\n")
+print(result(100000), "\n")
 print(time.time() - timer)
