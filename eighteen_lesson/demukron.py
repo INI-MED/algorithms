@@ -23,16 +23,16 @@ class Graph:
         return stack
 
     def topologic_sort(self) -> List[int]:
-        levels = []
+        self.levels = []
         data = self.get_input_nodes()
         counter = 0
-        curr_level = 0
+        curr_self.level = 0
 
         while counter != self.count:
             for i in range(self.count):
                 if data[i] == 0:
                     ind = 0
-                    levels.insert(counter, i)
+                    self.levels.insert(counter, i)
                     for node in self.nodes:
                         if node[i] == 1:
                             data[ind] -= 1
@@ -40,9 +40,9 @@ class Graph:
 
                     data[i] = -1  # mark the top as used
                     counter += 1
-            curr_level += 1
-        levels.reverse()
-        return levels
+            curr_self.level += 1
+        self.levels.reverse()
+        return self.levels
 
 
 if __name__ == '__main__':
